@@ -7,15 +7,16 @@ public class assertTitle {
 
 	public static void main(String[] args) {
 
-		//String driverPath = System.getProperty("usr.dir");
-		
+		String driverPath = System.getProperty("usr.dir");
+		System.setProperty("webdriver.gecko.driver", driverPath + "/lib/gecko/geckodriver");
+		WebDriver driver = new FirefoxDriver();
 		
 		try {
 
 			
-			WebDriver driver = new FirefoxDriver();
+			
 			//System.setProperty("webdriver.gecko.driver", "/Users/macbook/git/Project25July/SampleFirefoxSelenium/lib/geckodriver/geckodriver");
-			System.setProperty("webdriver.gecko.driver", "/Users/macbook/git/Project25July/SampleFirefoxSelenium/lib/geckodriver/geckodriver");
+			
 			
 			driver.get("https://google.com");
 			
