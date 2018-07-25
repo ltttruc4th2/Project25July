@@ -14,9 +14,11 @@ public class Sample {
 		System.setProperty("webdriver.gecko.driver", "/Users/macbook/git/Project25July/SampleFirefoxSelenium/lib/geckodriver/geckodriver");
 
 		
+		WebDriver driver = new FirefoxDriver();
+		
 		try {
 			
-			WebDriver driver = new FirefoxDriver();
+			
 			
 			
 			//Always maximize the browser window
@@ -51,13 +53,15 @@ public class Sample {
 			//Sleep for 1.8s
 			Thread.sleep(1800);
 			
-			//Quite Firefox
-			driver.quit();
-			
 		} catch (Exception e) {
 			
 			System.out.println(e);
 		}
+		//Refresh the page
+		driver.navigate().refresh();
+		
+		//Quite Firefox
+		driver.quit();
 		
 	}
 	
